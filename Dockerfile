@@ -19,4 +19,6 @@ COPY --from=build-env /app/out .
 
 # Run the app on container startup
 # Use your project name for the second parameter
-ENTRYPOINT [ "dotnet", "LoginAPI.dll" ]
+#ENTRYPOINT [ "dotnet", "LoginAPI.dll" ]
+# for heroku
+CMD ASPNETCORE_URLS=http://*:$PORT dotnet LoginAPI.dll

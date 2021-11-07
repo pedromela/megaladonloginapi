@@ -1,0 +1,1 @@
+web: cd $HOME/heroku_output/megaladonloginapi && dotnet ./megaladonloginapi.dll --server.urls http://+:$PORT ${CORE_ENVIRONMENT}
